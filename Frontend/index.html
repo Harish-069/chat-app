@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>chatwave - Chat App</title>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <!-- <script defer src="/socket.io/socket.io.js"></script> -->
+
+    
+    <script defer src="/Frontend/js/client.js"></script>
+    <link rel="stylesheet" href="/Frontend/css/style.css" />
+    <link rel="icon" type="image/png" href="/Frontend/chatwave.png"/>
+</head>
+<body>
+
+    <nav>
+        <img class="logo" src="chatwave.png" />
+        <h1></h1>
+    </nav>
+
+    <div class="container" id="chat-container"></div>
+
+    <div class="send">
+        <div class="emoji-picker" id="emoji-picker" style="display: none;">
+            <span class="emoji" data-emoji="😀">😀</span>
+            <span class="emoji" data-emoji="😊">😊</span>
+            <span class="emoji" data-emoji="😂">😂</span>
+            <span class="emoji" data-emoji="😍">😍</span>
+            <span class="emoji" data-emoji="👍">👍</span>
+            <span class="emoji" data-emoji="🙌">🙌</span>
+            <span class="emoji" data-emoji="🎉">🎉</span>
+            <span class="emoji" data-emoji="🔥">🔥</span>
+            <span class="emoji" data-emoji="😢">😢</span>
+            <span class="emoji" data-emoji="😎">😎</span>
+            <span class="emoji" data-emoji="💖">💖</span>
+            <span class="emoji" data-emoji="🌟">🌟</span>
+            <span class="emoji" data-emoji="✨">✨</span>
+            <span class="emoji" data-emoji="💬">💬</span>
+            <span class="emoji" data-emoji="🎂">🎂</span>
+            <span class="emoji" data-emoji="🎁">🎁</span>
+        </div>
+        <div class="emoji-suggestions" id="emoji-suggestions" style="display: none;"></div>
+        <form action="#" id="sendcontainer">
+            <label for="file-input" class="file-btn">🔗</label>
+            <input type="file" id="file-input" style="display: none;" accept="image/*,.pdf,.doc,.docx"/>
+            <button type="button" class="emoji-btn" id="emoji-btn">😊</button>
+            <input type="text" name="messageInp" id="messageInp" placeholder="Type a message" autocomplete="off"/>
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+
+    <div class="modal" id="username-modal">
+        <div class="modal-content">
+            <h2>Welcome to ChatWave</h2>
+            <input type="text" id="username-input" placeholder="Enter your name" autocomplete="off"/>
+            <input type="file" id="profile-pic-input" accept="image/*"/>
+            <button id="join-btn">Join Chat</button>
+            <p id="error-message" style="color: red; display: none;">Please enter a valid username.</p>
+        </div>
+    </div>
+</body>
+</html>
