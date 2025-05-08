@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const socket = io('http://localhost:8000');
+    const socket = io('https://chatwave-app-p8t7.onrender.com');
     const form = document.getElementById('sendcontainer');
     const messageInput = document.getElementById('messageInp');
     const fileInput = document.getElementById('file-input');
